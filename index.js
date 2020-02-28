@@ -25,10 +25,7 @@ let food = {
 
 const dead = new Audio()
 const eat = new Audio()
-const up = new Audio()
-const left = new Audio()
-const down = new Audio()
-const right = new Audio()
+
 
 dead.src = "audio/game_over.mp3"
 eat.src = "audio/game_boy.mp3"
@@ -65,10 +62,10 @@ function draw(){
     ctx.drawImage(ground,0,0)
 
     for(let i = 0; i < snake.length; i++){
-        ctx.fillStyle = (i === 0)? "green" : "white ";
+        ctx.fillStyle = (i === 0)? "purple" : "white";
         ctx.fillRect(snake[i].x,snake[i].y,box,box);
 
-        ctx.strokeStyle = "red";
+        ctx.strokeStyle = "blue";
         ctx.strokeRect(snake[i].x,snake[i].y,box,box);
     }
 
